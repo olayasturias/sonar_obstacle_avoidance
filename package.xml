@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>sonar_obstacle_avoidance</name>
+  <version>0.1.0</version>
+  <description>The sonar_obstacle_avoidance package</description>
+
+  <maintainer email="olaya@ece.au.dk">olaya alvarez tunon</maintainer>
+
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <export>
+  </export>
+</package>
