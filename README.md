@@ -41,8 +41,11 @@ $$V_p = V_{max} - K_p*p$$
 The robot can receive commands for linear velocity in $x$ and angular velocity around $z$ (yaw). The velocities are then formulated as:
 
 Linear velocity: 
+
 $$ V_x = V_{max} - K_p*p_x$$
+
 Angular velocity: 
+
 $$ \dot{\theta} =  K_{\theta}*\theta = K_{\theta}*arctan\left(\frac{- K_p*p_y}{V_{max} - K_p*p_x}\right)
 $$
 
