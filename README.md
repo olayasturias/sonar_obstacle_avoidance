@@ -29,14 +29,18 @@ p_x = \sum_ip_{i_x} = \sum_i\frac{1}{r_i^2}cos(\psi_i)$$
 $$p_y = \sum_ip_{i_y} = \sum_i\frac{1}{r_i^2}sin(\psi_i)
 $$
 
-We will obtain the new velocity vector $V_x$ according to the maximum linear speed that we have defined for the robot $V_{max}$ and the potential vector $p$.
+We will obtain the new velocity vector $V_p$ according to the maximum linear speed that we have defined for the robot $V_{max}$ and the potential vector $p$, multiplied by a constant $K_p$ that we will determine experimentally.
 
-The robot can receive commands for linear velocity in $x$ and angular velocity around $z$ (yaw). For controlling those velocities, we will define two gains: $K_p$ and $K_{\theta}$. The velocities are then formulated as:
+$$V_p = V_{max} - K_p*p$$
 
-$$ v_x = V_{max} - K_p*p_x$$
+The robot can receive commands for linear velocity in $x$ and angular velocity around $z$ (yaw). The velocities are then formulated as:
 
-$$ \dot{\theta} =  K_{\theta}*\theta $$
+$$ V_x = V_{max} - K_p*p_x$$
 
-That is, the linear velocity is inveresely proportional to the distance between the robot and the obstacle, and the angular velocity is directly proportional to the angle between the $x$ axis and $V_x$.
+$$ \dot{\theta} =  K_{\theta}*\theta = K_{\theta}*arctan\left(\frac{- K_p*p_y}{V_{max} - K_p*p_x}\right)
+$$
+
+That is, the new linear velocity $V_x$ is inveresely proportional to the distance between the robot and the obstacle. How much the distance to the obstacle affects the linear velocity is defined by the gain.
+The angular velocity is directly proportional to the angle between the $x$ axis and $V_p$, also regulated by a gain $K_{\theta}$.
 
 ![](https://raw.githubusercontent.com/olayasturias/sonar_obstacle_avoidance/fb51da19165f0cf4996e7d96d4ae56f8e1b2a938/assets/potential_vel.svg)
