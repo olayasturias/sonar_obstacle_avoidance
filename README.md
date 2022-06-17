@@ -25,16 +25,16 @@ $$ p_i = \begin{bmatrix}
 The overall projection of the potential fields in the $x$ and $y$ axis is obtained as the sum of all values:
 
 $$
-p_x = \sum_ip_{i_x} = \sum_i\frac{1}{r_i^2}cos(\psi_i) \\
-p_y = \sum_ip_{i_y} = \sum_i\frac{1}{r_i^2}sin(\psi_i)
+p_x = \sum_ip_{i_x} = \sum_i\frac{1}{r_i^2}cos(\psi_i)$$
+$$p_y = \sum_ip_{i_y} = \sum_i\frac{1}{r_i^2}sin(\psi_i)
 $$
 
 We will obtain the new velocity vector $V_x$ according to the maximum linear speed that we have defined for the robot $V_{max}$ and the potential vector $p$.
 
 The robot can receive commands for linear velocity in $x$ and angular velocity around $z$ (yaw). For controlling those velocities, we will define two gains: $K_p$ and $K_{\theta}$. The velocities are then formulated as:
 
-$$ v_x = V_{max} - K_p*p_x \\
-\dot{\theta} =  K_{\theta}*\theta $$
+$$ v_x = V_{max} - K_p*p_x$$
+$$ \dot{\theta} =  K_{\theta}*\theta $$
 
 
 
