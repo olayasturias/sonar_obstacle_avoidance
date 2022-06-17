@@ -8,20 +8,16 @@ import numpy as np
 from cv_bridge import CvBridgeError, CvBridge
 import cv2
 
-class SonarTauComputationClass:
+class SonarAvoidanceComputationClass:
 
     def __init__(self, sonar_topic = '/rexrov2/sss_sonar'):
 
-        ######## IMPORTANT PARAMETERS: ########
-        # Minimum number of features needed to compute the average TTT for each ROI
-        self.min_TTT_number = 10
         self.n_ROIs = 5
         self.Kf = 20
         self.Km = 5
         self.sonar_sub_name = sonar_topic
         self.velocity_command_topic_name = '/rexrov2/cmd_vel'
         self.ranges = np.empty(self.n_ROIs)
-        #######################################
 
         # Sonar Subscriber
         self.sonar_sub = rospy.Subscriber(self.sonar_sub_name, LaserScan, self.callback_sonar)
@@ -87,9 +83,9 @@ class SonarTauComputationClass:
 
 
 
-def tau_computation():
-    rospy.init_node("tau_computation", anonymous=False, log_level=rospy.DEBUG)
-    avoid_boi = SonarTauComputationClass(sonar_topic = '/rexrov2/sss_sonar')
+def sonar_avoid():
+    rospy.init_node("naive_avoidance", anonymous=False, log_level=rospy.DEBUG)
+    avoid_boi = SonarAvoidanceComputationClass(sonar_topic = '/rexrov2/sss_sonar')
 
     rate = rospy.Rate(8) # 8hz
     while not rospy.is_shutdown():
@@ -97,4 +93,4 @@ def tau_computation():
         rate.sleep()
 
 if __name__ == '__main__':
-    tau_computation()
+    sonar_avoid()

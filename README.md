@@ -8,6 +8,7 @@ We will send the robot velocity commands in the $x$ (linear) and yaw axis (angul
 
 # Potential field avoidance
 
+Implemented in [potential_avoidance.py](https://github.com/olayasturias/sonar_obstacle_avoidance/blob/main/nodes/potential_avoidance.py)
 #### Problem statement:
 We want to move an underwater robot in an unknown environment without colliding. For that, we have a sidescan sonar sensor whose measurements are being published in a `sensor_msgs/LaserScan` topic. The topic's message content is outlined [here](http://docs.ros.org/en/lunar/api/sensor_msgs/html/msg/LaserScan.html).
 
