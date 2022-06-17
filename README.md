@@ -46,8 +46,7 @@ $$ V_x = V_{max} - K_p*p_x$$
 
 Angular velocity: 
 
-$$ \dot{\theta} =  K_{\theta}*\theta = K_{\theta}*arctan\left(\frac{- K_p*p_y}{V_{max} - K_p*p_x}\right)
-$$
+$$ \dot{\theta} =  K_{\theta}*\theta = K_{\theta}*arctan\left(\frac{- K_p*p_y}{V_{max} - K_p*p_x}\right)$$
 
 That is, the new linear velocity $V_x$ is inveresely proportional to the distance between the robot and the obstacle. How much the distance to the obstacle affects the linear velocity is defined by the gain.
 The angular velocity is directly proportional to the angle between the $x$ axis and $V_p$, also regulated by a gain $K_{\theta}$.
