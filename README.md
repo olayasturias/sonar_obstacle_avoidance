@@ -48,3 +48,14 @@ That is, the new linear velocity $V_x$ is inveresely proportional to the distanc
 The angular velocity is directly proportional to the angle between the $x$ axis and $V_p$, also regulated by a gain $K_{\theta}$.
 
 ![](https://raw.githubusercontent.com/olayasturias/sonar_obstacle_avoidance/65bcbb3110858253ed637edb41959ac369573b4f/assets/potential_vel.svg)
+
+#### Results
+Testing in the maze environment defined [here](https://github.com/olayasturias/remaro_uw_sim), with uneven brick walls that challenge more the laser measurements. The video is speeded up by x10.
+
+![](https://github.com/olayasturias/sonar_obstacle_avoidance/blob/main/assets/potential_avoidance_maze.gif?raw=true)
+
+Note that only the 2D sonar is used, and the 3D sonar is displayed for visualization purposes only.
+
+#### Improvements:
+- Better tuning of parameters: higher linear velocity and smoother rotations.
+- Handling symmetry of obstacles.
