@@ -11,6 +11,10 @@ We will send the robot velocity commands in the $x$ (linear) and yaw axis (angul
 #### Problem statement:
 We want to move an underwater robot in an unknown environment without colliding. For that, we have a sidescan sonar sensor whose measurements are being published in a `sensor_msgs/LaserScan` topic. The topic's message content is outlined [here](http://docs.ros.org/en/lunar/api/sensor_msgs/html/msg/LaserScan.html).
 
+The velocity comands will be sent through the `geometry_msgs/Twist` topic named `${robot_namespace}/cmd_vel`, with values ranging between 0 and 1. The topic's message content is outlined [here](http://docs.ros.org/en/noetic/api/geometry_msgs/html/msg/Twist.html)
+
+#### Proposed solution:
+
 In our potential-field like approach for obstacle avoidance, the obstacles will generate repulsive fields that will make the robot decrease the linear speed and/or rotate as the vehicle approaches them. 
 
 When a sonar beam collides with an obstacle, we will define a potential vector $p_i$ pointing to the vehicle, and inversely proportional to the squared distance between the obstacle and the vehicle $r_i$, such that:
