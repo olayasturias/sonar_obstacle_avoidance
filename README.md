@@ -36,6 +36,6 @@ The robot can receive commands for linear velocity in $x$ and angular velocity a
 $$ v_x = V_{max} - K_p*p_x$$
 $$ \dot{\theta} =  K_{\theta}*\theta $$
 
-
+That is, the linear velocity is inveresely proportional to the distance between the robot and the obstacle, and the angular velocity is directly proportional to the angle between the $x$ axis and $V_x$.
 
 ![](https://raw.githubusercontent.com/olayasturias/sonar_obstacle_avoidance/fb51da19165f0cf4996e7d96d4ae56f8e1b2a938/assets/potential_vel.svg)
