@@ -21,8 +21,8 @@ In our potential-field like approach for obstacle avoidance, the obstacles will 
 When a sonar beam collides with an obstacle, we will define a potential vector $p_i$ pointing to the vehicle, and inversely proportional to the squared distance between the obstacle and the vehicle $r_i$, such that:
 
 $$ p_i = \begin{bmatrix}
-\frac{1}{r_i^2}cos(\psi_i) \\
-\frac{1}{r_i^2}sin(\psi_i) 
+\frac{1}{r_i^2}cos(\varphi_i) \\
+\frac{1}{r_i^2}sin(\varphi_i) 
 \end{bmatrix} $$
 
 ![](https://raw.githubusercontent.com/olayasturias/sonar_obstacle_avoidance/65bcbb3110858253ed637edb41959ac369573b4f/assets/obsav.svg)
@@ -30,8 +30,8 @@ $$ p_i = \begin{bmatrix}
 The overall projection of the potential fields in the $x$ and $y$ axis is obtained as the sum of all values:
 
 $$
-p_x = \sum_ip_{i_x} = \sum_i\frac{1}{r_i^2}cos(\psi_i)$$
-$$p_y = \sum_ip_{i_y} = \sum_i\frac{1}{r_i^2}sin(\psi_i)
+p_x = \sum_ip_{i_x} = \sum_i\frac{1}{r_i^2}cos(\varphi_i)$$
+$$p_y = \sum_ip_{i_y} = \sum_i\frac{1}{r_i^2}sin(\varphi_i)
 $$
 
 We will obtain the new velocity vector $V_p$ according to the maximum linear speed that we have defined for the robot $V_{max}$ and the potential vector $p$, multiplied by a constant $K_p$ that we will determine experimentally.
