@@ -34,6 +34,7 @@ We will obtain the new velocity vector $V_x$ according to the maximum linear spe
 The robot can receive commands for linear velocity in $x$ and angular velocity around $z$ (yaw). For controlling those velocities, we will define two gains: $K_p$ and $K_{\theta}$. The velocities are then formulated as:
 
 $$ v_x = V_{max} - K_p*p_x$$
+
 $$ \dot{\theta} =  K_{\theta}*\theta $$
 
 That is, the linear velocity is inveresely proportional to the distance between the robot and the obstacle, and the angular velocity is directly proportional to the angle between the $x$ axis and $V_x$.
