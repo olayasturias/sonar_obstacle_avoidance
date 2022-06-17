@@ -15,26 +15,26 @@ In our potential-field like approach for obstacle avoidance, the obstacles will 
 
 When a sonar beam collides with an obstacle, we will define a potential vector $p_i$ pointing to the vehicle, and inversely proportional to the squared distance between the obstacle and the vehicle $r_i$, such that:
 
-$p_i = \begin{bmatrix}
+$$ p_i = \begin{bmatrix}
 \frac{1}{r_i^2}cos(\psi_i) \\
 \frac{1}{r_i^2}sin(\psi_i) 
-\end{bmatrix}$
+\end{bmatrix} $$
 
 ![](https://raw.githubusercontent.com/olayasturias/sonar_obstacle_avoidance/7ef739a28145ee3e6a69ec017fc029a9c91f0842/assets/obsav.svg)
 
 The overall projection of the potential fields in the $x$ and $y$ axis is obtained as the sum of all values:
 
-$p_x = \sum_ip_{i_x} = \sum_i\frac{1}{r_i^2}cos(\psi_i) \\
-p_y = \sum_ip_{i_y} = \sum_i\frac{1}{r_i^2}sin(\psi_i)$
+$$
+p_x = \sum_ip_{i_x} = \sum_i\frac{1}{r_i^2}cos(\psi_i) \\
+p_y = \sum_ip_{i_y} = \sum_i\frac{1}{r_i^2}sin(\psi_i)
+$$
 
 We will obtain the new velocity vector $V_x$ according to the maximum linear speed that we have defined for the robot $V_{max}$ and the potential vector $p$.
 
 The robot can receive commands for linear velocity in $x$ and angular velocity around $z$ (yaw). For controlling those velocities, we will define two gains: $K_p$ and $K_{\theta}$. The velocities are then formulated as:
 
-$
-v_x = V_{max} - K_p*p_x \\
-\dot{\theta} =  K_{\theta}*\theta
-$
+$$ v_x = V_{max} - K_p*p_x \\
+\dot{\theta} =  K_{\theta}*\theta $$
 
 
 
