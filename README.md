@@ -20,7 +20,7 @@ $$ p_i = \begin{bmatrix}
 \frac{1}{r_i^2}sin(\psi_i) 
 \end{bmatrix} $$
 
-![](https://raw.githubusercontent.com/olayasturias/sonar_obstacle_avoidance/7ef739a28145ee3e6a69ec017fc029a9c91f0842/assets/obsav.svg)
+![](https://raw.githubusercontent.com/olayasturias/sonar_obstacle_avoidance/65bcbb3110858253ed637edb41959ac369573b4f/assets/obsav.svg)
 
 The overall projection of the potential fields in the $x$ and $y$ axis is obtained as the sum of all values:
 
@@ -43,4 +43,4 @@ $$
 That is, the new linear velocity $V_x$ is inveresely proportional to the distance between the robot and the obstacle. How much the distance to the obstacle affects the linear velocity is defined by the gain.
 The angular velocity is directly proportional to the angle between the $x$ axis and $V_p$, also regulated by a gain $K_{\theta}$.
 
-![](https://raw.githubusercontent.com/olayasturias/sonar_obstacle_avoidance/fb51da19165f0cf4996e7d96d4ae56f8e1b2a938/assets/potential_vel.svg)
+![](https://raw.githubusercontent.com/olayasturias/sonar_obstacle_avoidance/65bcbb3110858253ed637edb41959ac369573b4f/assets/potential_vel.svg)
