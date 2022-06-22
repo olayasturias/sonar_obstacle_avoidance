@@ -65,7 +65,7 @@ def generate_launch_description():
 
     agent_node = Node(
         package='sonar_obstacle_avoidance',
-        executable='potential_avoidance.py',
+        executable='potential_avoidance',
         output='screen'
     )
 
