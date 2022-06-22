@@ -56,8 +56,8 @@ class SonarPotentialField(Node):
         rc_linear_x =np.uint16(linear_x*450+1550)
         rc_angle_rate =np.uint16(angle_rate*450+1550)
         msg = OverrideRCIn()
-        msg.channels[5] = rc_linear_x # Forward
-        msg.channels[4] = rc_angle_rate #yaw
+        msg.channels[4] = rc_linear_x # Forward
+        msg.channels[3] = rc_angle_rate #yaw
 
         self.steering_signal.publish(msg)
        
