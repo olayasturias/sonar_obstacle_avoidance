@@ -92,7 +92,7 @@ def generate_launch_description():
         ),
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(
-                os.path.join(pkg_tudelft_hackathon,
+                os.path.join(sonar_obstacle_avoidance,
                                 'launch',
                                 'bluerov_ign_sim.launch.py')),
             condition=IfCondition(LaunchConfiguration('simulation'))
