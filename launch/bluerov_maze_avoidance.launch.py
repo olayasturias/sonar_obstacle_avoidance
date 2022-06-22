@@ -69,7 +69,7 @@ def generate_launch_description():
         output='screen'
     )
 
-    pkg_tudelft_hackathon = get_package_share_directory('tudelft_hackathon')
+    pkg_sonar_obstacle_avoidance = get_package_share_directory('sonar_obstacle_avoidance')
 
     return LaunchDescription([
         simulation_arg,
@@ -92,7 +92,7 @@ def generate_launch_description():
         ),
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(
-                os.path.join(sonar_obstacle_avoidance,
+                os.path.join(pkg_sonar_obstacle_avoidance,
                                 'launch',
                                 'bluerov_ign_sim.launch.py')),
             condition=IfCondition(LaunchConfiguration('simulation'))
