@@ -51,10 +51,10 @@ class SonarPotentialField(Node):
         angle_rate = self.Kphi*np.arctan(float(- self.Kp * self.sum_potentials_y/linear_x))
         
         # Write velocities in channels
-        # The previous values are between 0 and 1. 
+        # The previous values are between -1 and 1. 
         # RC values are  between 1100 and 2000
-        rc_linear_x =np.uint16(linear_x*(2000-1100)+1100)
-        rc_angle_rate =np.uint16(angle_rate*(2000-1100)+1100)
+        rc_linear_x =np.uint16(linear_x*450+1550)
+        rc_angle_rate =np.uint16(angle_rate*450+1550)
         msg = OverrideRCIn()
         msg.channels[5] = rc_linear_x # Forward
         msg.channels[4] = rc_angle_rate #yaw
