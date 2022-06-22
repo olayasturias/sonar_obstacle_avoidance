@@ -52,9 +52,9 @@ class SonarPotentialField(Node):
         
         # Write velocities in channels
         # The previous values are between -1 and 1. 
-        # RC values are  between 1100 and 2000
-        rc_linear_x =np.uint16(linear_x*450+1550)
-        rc_angle_rate =np.uint16(angle_rate*450+1550)
+        # RC values are  between 1100 and 1900
+        rc_linear_x =np.uint16(linear_x*400+1500)
+        rc_angle_rate =np.uint16(angle_rate*400+1500)
         msg = OverrideRCIn()
         msg.channels[4] = rc_linear_x # Forward
         msg.channels[3] = rc_angle_rate #yaw
