@@ -4,7 +4,7 @@ The aim of this obstacle avoidance package is to solely use the measurements fro
 
 We will send the robot velocity commands in the $x$ (linear) and yaw axis (angular around $z$).
 
-**This package has been tested under Ubuntu 18.04 with ROS Melodic.**
+**This package has been tested under Ubuntu 20.04 with ROS Foxy.**
 
 # Potential field avoidance
 
