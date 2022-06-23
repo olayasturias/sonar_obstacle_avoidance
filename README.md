@@ -12,7 +12,7 @@ Implemented in [potential_avoidance.py](https://github.com/olayasturias/sonar_ob
 #### Problem statement:
 We want to move an underwater robot in an unknown environment without colliding. For that, we have a sidescan sonar sensor whose measurements are being published in a `sensor_msgs/LaserScan` topic. The topic's message content is outlined [here](http://docs.ros.org/en/lunar/api/sensor_msgs/html/msg/LaserScan.html).
 
-The velocity comands will be sent through the `mavros_msgs/OverrideRCIn` topic named `/mavros/rc/override`, with values ranging between 1100 and 1900. The topic's message content is outlined [here]([http://docs.ros.org/en/noetic/api/geometry_msgs/html/msg/Twist.html](http://docs.ros.org/en/hydro/api/mavros/html/msg/OverrideRCIn.html))
+The velocity comands will be sent through the `mavros_msgs/OverrideRCIn` topic named `/mavros/rc/override`, with values ranging between 1100 and 1900. The topic's message content is outlined [here](http://docs.ros.org/en/hydro/api/mavros/html/msg/OverrideRCIn.html)
 
 #### Proposed solution:
 
